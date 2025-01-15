@@ -1,4 +1,4 @@
-public class switchCase {
+public class SwitchCase {
     public static void main(String[] args) {
         int dia = 4;
         String nomeDia;
