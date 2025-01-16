@@ -10,19 +10,34 @@ public class advinhaNumero {
         int numeroDigitado = 0;
 
 
-        while (numeroDigitado != -1 && contador < 5) {
+        while (contador < 5) {
 
-            if (numeroDigitado != numeroGerado) {
-                System.out.println("Advinhe o numero ?");
-                numeroDigitado = leitura.nextInt();
-                contador++;
-            } else {
-                System.out.println("você acertou!!! O numero correto é " + numeroGerado + "!");
+            System.out.println("Advinhe o numero?");
+            numeroDigitado = leitura.nextInt();
+            contador++;
+
+            if (numeroDigitado == numeroGerado) {
+                System.out.println("Parabens você acertou! O numero foi " + numeroGerado);
                 break;
+
+            } else if (numeroDigitado > numeroGerado) {
+                System.out.println("O numero gerado é menor, tente de novo!");
+
+            } else if (numeroDigitado < numeroGerado) {
+                System.out.println("O numero gerado é maior, tente de novo!");
+
             }
+
+            if ( contador == 5 && numeroDigitado != numeroGerado){
+                System.out.println("Tentou 5 vezes, tente depois! O numero foi " + numeroGerado);
+            }
+
         }
-        System.out.println("você tentou 5 vezes! Tente depois. O numero era "+ numeroGerado);
     }
 }
+
+
+
+
 
 
