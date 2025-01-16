@@ -16,8 +16,7 @@ public class LoopWhile {
                 mediaAvaliação += nota;
                 totalDeNotas++;
             }
-            System.out.println("Media de avaliação é " + mediaAvaliação / totalDeNotas);
-
         }
+        System.out.println("Media de avaliação é " + mediaAvaliação / totalDeNotas + "quantidade de pessoas votantes: "+ totalDeNotas);
     }
 }
